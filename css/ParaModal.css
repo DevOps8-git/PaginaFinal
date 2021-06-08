@@ -1,0 +1,76 @@
+.ventana{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ventana{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-ventana:checked ~ .ventana{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor{
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	background: none;
+	box-shadow: 1px 7px 25px rgba(0, 0, 0, 0);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-ventana:checked ~ .ventana .contenedor{
+	transform: translateY(0%);
+} 
+.contenedor header{
+	padding: 10px;
+	background: none;
+	color: #fff;
+    text-align:center;
+    cursor: pointer;
+}
+.contenedor label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido h3{
+	margin-bottom: 10px;
+}
+.contenido p{
+	margin-bottom: 7px;
+}
+.contenido img{
+    display: block;
+    margin: auto;
+}
+#btn-ventana{
+	display: none;
+}
+.lbl-ventana{
+	background: #fff;
+	padding: 10px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor{
+		width: 95%;
+	}
+}
